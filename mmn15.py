@@ -9,7 +9,6 @@ functions:
     top_price(apts): receives a lists of apartments and returns the most expensive apartment.
     only_valid_apts(apts): receives a lists of apartments and returns a list of apartments with a view or a pool that cost over 1000000 shekels.
 
-ID : 211398029
 Author: Adi Pedel
 Semester : 2025b
 """
