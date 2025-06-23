@@ -24,7 +24,7 @@ class Apt:
 
     def __eq__(self, other):
         if isinstance(other, Apt):
-            return self._area == other._area & self._floor == other._floor
+            return self._area == other._area and self._floor == other._floor
         else:
             return NotImplemented
 

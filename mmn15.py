@@ -145,14 +145,14 @@ def only_valid_apts(apts):
     minimum_price = 1000000
     for apartment in apts:
         if isinstance(apartment,GardenApt):
-            if (GardenApt.get_price(apartment) > minimum_price) & (GardenApt.get_has_view(apartment) == True):
+            if (GardenApt.get_price(apartment) > minimum_price) and (GardenApt.get_has_view(apartment) == True):
                 apts_list.append(apartment)
         elif isinstance(apartment,RoofApt):
-                if (RoofApt.get_price(apartment) > minimum_price) & (RoofApt.get_has_view(apartment) == True |
+                if (RoofApt.get_price(apartment) > minimum_price) and (RoofApt.get_has_view(apartment) == True or
                                                              RoofApt.get_has_pool(apartment) == True):
                     apts_list.append(apartment)
         elif isinstance(apartment,SpecialApt):
-            if (SpecialApt.get_price(apartment) > minimum_price) & (SpecialApt.get_has_view(apartment) == True):
+            if (SpecialApt.get_price(apartment) > minimum_price) and (SpecialApt.get_has_view(apartment) == True):
                 apts_list.append(apartment)
     if not apts_list:
         return None

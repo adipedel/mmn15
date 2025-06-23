@@ -39,7 +39,7 @@ class GardenApt(SpecialApt):
 
     def __eq__(self, other):
         if isinstance(other, GardenApt):
-            return self._area == other._area & self._floor == other._floor & self._has_view == other._has_view & self._garden_area == other._garden_area
+            return self._area == other._area and self._floor == other._floor and self._has_view == other._has_view and self._garden_area == other._garden_area
         else:
             return NotImplemented
 

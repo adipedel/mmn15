@@ -38,7 +38,7 @@ class RoofApt(SpecialApt):
 
     def __eq__(self, other):
         if isinstance(other, RoofApt):
-            return self._area == other._area & self._floor == other._floor & self._has_view == other._has_view & self._has_pool == other._has_pool
+            return self._area == other._area and self._floor == other._floor and self._has_view == other._has_view and self._has_pool == other._has_pool
         else:
             return NotImplemented
 

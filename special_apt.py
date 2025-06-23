@@ -32,7 +32,7 @@ class SpecialApt(Apt):
 
     def __eq__(self, other):
         if isinstance(other, SpecialApt):
-            return self._area == other._area & self._floor == other._floor & self._has_view == other._has_view
+            return self._area == other._area and self._floor == other._floor and self._has_view == other._has_view
         else:
             return NotImplemented
 
